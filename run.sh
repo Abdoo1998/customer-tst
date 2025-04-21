@@ -13,6 +13,7 @@ if ! command -v uvicorn &> /dev/null; then
 fi
 
 # Start the uvicorn server in the background
+source venv/bin/activate
 uvicorn app:app --host 0.0.0.0 --port 5000 &
 UVICORN_PID=$!
 
